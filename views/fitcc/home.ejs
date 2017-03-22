@@ -1,0 +1,71 @@
+<style>
+    .table-list {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .table-list a {
+        display: table-cell;
+        width: 50%;
+        padding: 14px 1rem;
+        background-color: #fff;
+        border-left: 1px #f7f3f3 solid;
+        border-bottom: 1px #f7f3f3 solid;
+        font-size: .7rem;
+        line-height: 20px;
+        position: relative;
+    }
+    
+    .table-list a .icon {
+        position: absolute;
+        top: 13px;
+        right: .8rem;
+        display: block;
+        width: 38px;
+        height: 38px;
+    }
+</style>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="list-group">
+            <div>
+                <swiper instance="swiper" autoplay="2500" lazyLoading="true">
+                    <slides>
+                        <slide>
+                            <img src="/<%= appName %>/images/home_01.jpg" style="width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/<%= appName %>/images/home_02.jpg" style="width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/<%= appName %>/images/home_03.jpg" style="width: 100%;" />
+                        </slide>
+                    </slides>
+                    <pagination></pagination>
+                </swiper>
+            </div>
+            <div class="mt10">
+                <div class="table-list">
+                    <a ui-sref="appointment">
+                        <div>我的任务</div>
+                        <div class="f12 light">加油干！</div>
+                        <img src="/<%= appName %>/images/icon-search.png" alt="" class="icon">
+                    </a>
+                    <a href="">
+                        <div>我的待办</div>
+                        <div class="f12 light">领导辛苦了！</div>
+                        <img src="/<%= appName %>/images/icon-car.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="recommend-title mt10">
+                <i class="iconfont icon-likefill red"></i> 最新任务 <a href="/search/index.html" class="fr f12 light">查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+            <div class="recommend-title mt10">
+                <i class="iconfont icon-likefill red"></i> 最新待办 <a href="/search/index.html" class="fr f12 light">查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
