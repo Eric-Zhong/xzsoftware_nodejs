@@ -1,0 +1,137 @@
+<!--Begin 【/views/page/appointment】-->
+<!--预约车辆页面-->
+<style>
+    .car_brand {
+        width: 66px;
+        height: 66px;
+    }
+    
+    .form_addcar {
+        color: #e0e0e0
+    }
+    
+    .fs66 {
+        /*font-size: 66px*/
+        font-size: 66px;
+    }
+</style>
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="list-group">
+            <div>
+                <!--轮播图片-->
+                <swiper instance="swiper" autoplay="2500" lazyLoading="true">
+                    <slides>
+                        <slide>
+                            <div style="height: 150px; width: 100%;">
+                                这里放预订的简要说明
+                            </div>
+                        </slide>
+                        <slide>
+                            <img src="/images/home_01.jpg" style="height: 150px; width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/images/home_03.jpg" style="height: 150px; width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/images/home_02.jpg" style="height: 150px; width: 100%;" />
+                        </slide>
+                    </slides>
+                    <pagination></pagination>
+                </swiper>
+            </div>
+        </div>
+        <div class="list-group section">
+            <div>填写你的预订信息</div>
+            <form action="">
+                <div class="form-group">
+                    <label for="">用车日期</label>
+                    <input class="form-control" type="date" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">车辆选择</label>
+                    <div class="row">
+                        <div class="col-xs-3 text-center">
+                            <div>
+                                <img class="car_brand" src="/images/car/brand/bc.jpg" alt="">
+                            </div>
+                            <div>
+                                A4L
+                            </div>
+                            <div>
+                                10 辆
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-center">
+                            <div>
+                                <img class="car_brand" src="/images/car/brand/bm.jpg" alt="">
+                            </div>
+                            <div>
+                                A4L
+                            </div>
+                            <div>
+                                9 辆
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-center">
+                            <div>
+                                <img class="car_brand" src="/images/car/brand/fll.jpg" alt="">
+                            </div>
+                            <div>
+                                A4L
+                            </div>
+                            <div>
+                                10
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-center">
+                            <div>
+                                <img class="car_brand" src="/images/car/brand/jb.jpg" alt="">
+                            </div>
+                            <div>
+                                A4L
+                            </div>
+                            <div>
+                                10
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-center">
+                            <div>
+                                <img class="car_brand" src="/images/car/brand/lsls.jpg" alt="">
+                            </div>
+                            <div>
+                                A4L
+                            </div>
+                            <div>
+                                10
+                            </div>
+                        </div>
+                        <div class="col-xs-3 text-center form_addcar">
+                            <div>
+                                <i class="fa fa-plus-square-o fs66" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                车型
+                            </div>
+                            <div>
+                                数量
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">同意约车条款 <a ui-sref="appointment.contract">条款内容</a></label>
+                    <ui-switch ng-model="agreed"></ui-switch>
+                </div>
+                <div class="form-group">
+                    <div ui-view/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" ng-disabled="!agreed">发布预约</button>
+                </div>
+            </form>
+        </div>
+        <hr/>
+    </div>
+</div>
+<!--End 【/views/page/appointment】-->

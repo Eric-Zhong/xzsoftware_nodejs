@@ -1,0 +1,44 @@
+{
+  "name": "ive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "ejs": "~2.3.3",
+    "koa": "^1.1.2",
+    "koa-bodyparser": "^2.0.1",
+    "koa-json": "^1.1.1",
+    "koa-logger": "^1.3.0",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^5.3.0",
+    "koa-static": "^1.5.2",
+    "koa-views": "^3.1.0"
+  },
+  "devDependencies": {
+    "angular": "^1.6.3",
+    "angular-chart.js": "^1.1.1",
+    "angular-route": "^1.6.3",
+    "angular-swiper": "^0.4.0",
+    "angular-ui-router": "^0.4.2",
+    "angular-ui-swiper": "^2.3.6",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "font-awesome": "^4.7.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-markdown": "^0.7.0",
+    "mobile-angular-ui": "^1.3.4",
+    "sequelize": "^3.30.2",
+    "tedious": "^1.15.0",
+    "webpack": "^2.2.1"
+  }
+}
