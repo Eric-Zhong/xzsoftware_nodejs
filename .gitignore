@@ -1,7 +1,7 @@
 # 不同步当前平台所使用的配置文件信息
 config-default.js
 config-test.js
-
+config-override.js
 
 
 # Logs

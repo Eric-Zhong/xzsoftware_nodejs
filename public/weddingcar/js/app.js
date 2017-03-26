@@ -26,7 +26,7 @@ app.run(function($transform) {
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider.state('home', {
-        url: '/?:from',
+        url: '/?{from}',
         params: {
             eu: "customer", // End-User ?
             v: 1001
@@ -59,6 +59,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         template: '显示个人设置相关信息，如【我的预约】【我的婚车】【个人信息】【联系方式】等。'
     });
     $stateProvider.state('driver', {
+        url: '/driver',
+        abstract: true, // 设置后，该state是不能被view到的
         params: {
             eu: "driver", // Driver ?
             v: 1001
@@ -71,30 +73,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
             "footbar": {
                 templateUrl: '/weddingcar/footbar',
                 controller: "footbarCtrl"
-            },
-            "header": {
-                template: "ddddddddddddddddddd"
             }
         },
         // template: '显示车友首页',
         createdBy: "Eric-Zhong.Xu"
     });
     $stateProvider.state("driver.index", {
-        url: "/driver/index",
+        url: "/index",
         views: {
-            // Default Ui-View
             "main@driver": {
-                templateUrl: "/weddingcar/driver/index"
-            },
-            "footbar@driver": {
-                templateUrl: '/weddingcar/footbar',
-                controller: "footbarCtrl"
-            },
-            "main@driver.index": {
-                template: "hhhhhhhhhhhhhhhh"
+                templateUrl: "/weddingcar/driver/main"
             },
             "header@driver": {
-                template: "ddddddddddddddddddd"
+                templateUrl: "/weddingcar/swiper",
+                controller: "swiperCtrl"
             }
         },
         // template: '显示车友首页',

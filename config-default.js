@@ -1,10 +1,16 @@
 var config = {
-    dialect: 'mysql',
-    database: 'nodejs',
-    username: 'www',
-    password: 'www',
-    host: 'localhost',
-    port: 3306
+    db: {
+        dialect: 'mysql',
+        database: 'xzsoftware_nodejs',
+        username: 'root',
+        password: '',
+        host: 'localhost',
+        port: 3306
+    },
+    redis: {
+        host: "localhost",
+        port: 6379
+    }
 };
 
 module.exports = config;

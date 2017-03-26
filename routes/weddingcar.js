@@ -64,7 +64,17 @@ router.get('/driver/index', function*(next) {
     );
 });
 
-router.get('/ctrl/swiper', function*(next) {
+router.get('/driver/main', function*(next) {
+
+    var model = {};
+
+    yield this.render(
+        "weddingcar/driver/main",
+        model
+    );
+});
+
+router.get('/swiper', function*(next) {
 
     var model = {};
 
