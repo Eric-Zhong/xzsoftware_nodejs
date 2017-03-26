@@ -1,116 +1,112 @@
 <style>
-  .table-list {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .table-list a {
-    display: table-cell;
-    width: 50%;
-    padding: 14px 1rem;
-    background-color: #fff;
-    border-left: 1px #f7f3f3 solid;
-    border-bottom: 1px #f7f3f3 solid;
-    font-size: .7rem;
-    line-height: 20px;
-    position: relative;
-  }
-  
-  .table-list a .icon {
-    position: absolute;
-    top: 13px;
-    right: .8rem;
-    display: block;
-    width: 38px;
-    height: 38px;
-  }
+    .table-list {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .table-list a {
+        display: table-cell;
+        width: 50%;
+        padding: 14px 1rem;
+        background-color: #fff;
+        border-left: 1px #f7f3f3 solid;
+        border-bottom: 1px #f7f3f3 solid;
+        font-size: .7rem;
+        line-height: 20px;
+        position: relative;
+    }
+    
+    .table-list a .icon {
+        position: absolute;
+        top: 13px;
+        right: .8rem;
+        display: block;
+        width: 38px;
+        height: 38px;
+    }
 </style>
 
 <div class="scrollable">
-  <div class="scrollable-content">
-    <div class="list-group">
-      <div>
-        <swiper instance="swiper" autoplay="2500" lazyLoading="true">
-          <slides>
-            <slide>
-              <img src="/images/home_01.jpg" style="width: 100%;" />
-            </slide>
-            <slide>
-              <img src="/images/home_02.jpg" style="width: 100%;" />
-            </slide>
-            <slide>
-              <img src="/images/home_03.jpg" style="width: 100%;" />
-            </slide>
-          </slides>
-          <pagination></pagination>
-        </swiper>
-      </div>
-      <div class="mt10">
-        <div class="table-list">
-          <a ui-sref="appointment">
-            <div>预订婚车</div>
-            <div class="f12 light">超划算婚车</div>
-            <img src="/images/icon-search.png" alt="" class="icon">
-          </a>
-          <a href="">
-            <div>发布婚车</div>
-            <div class="f12 light">跑婚车赚外快</div>
-            <img src="/images/icon-car.png" alt="" class="icon">
-          </a>
+    <div class="scrollable-content">
+        <div class="list-group">
+            <div>
+                <swiper instance="swiper" autoplay="2500" lazyLoading="true">
+                    <slides>
+                        <slide>
+                            <img src="/images/home_01.jpg" style="width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/images/home_02.jpg" style="width: 100%;" />
+                        </slide>
+                        <slide>
+                            <img src="/images/home_03.jpg" style="width: 100%;" />
+                        </slide>
+                    </slides>
+                    <pagination></pagination>
+                </swiper>
+            </div>
+            <div class="mt10">
+                <div class="table-list">
+                    <a ui-sref="appointment">
+                        <div>预订婚车</div>
+                        <div class="f12 light">超划算婚车</div>
+                        <img src="/images/icon-search.png" alt="" class="icon">
+                    </a>
+                    <a ui-sref="driver">
+                        <div>发布婚车</div>
+                        <div class="f12 light">跑婚车赚外快</div>
+                        <img src="/images/icon-car.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="recommend-title mt10">
+                <i class="iconfont icon-likefill red"></i> 出车记录 <a href="/search/index.html" class="fr f12 light">查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+            <div class="section">
+                <img src="/images/case_001.jpg" alt="">
+                <div class="">
+                    <div>
+                        <span class="light">车型：</span>宝马15台
+                        <span class="fr f12 light">
+              <span class="f16 red">￥2400.00</span> 起
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <img src="/images/case_002.jpg" alt="">
+                <div class="">
+                    <div>
+                        <span class="light">车型：</span>宝马15台
+                        <span class="fr f12 light">
+              <span class="f16 red">￥2400.00</span> 起
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <img src="/images/case_002.jpg" alt="">
+                <div class="">
+                    <div>
+                        <span class="light">车型：</span>宝马15台
+                        <span class="fr f12 light">
+              <span class="f16 red">￥2400.00</span> 起
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <img src="/images/case_002.jpg" alt="">
+                <div class="">
+                    <div>
+                        <span class="light">车型：</span>宝马15台
+                        <span class="fr f12 light">
+              <span class="f16 red">￥2400.00</span> 起
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="recommend-title mt10">
-        <i class="iconfont icon-likefill red"></i> 出车记录 <a href="/search/index.html" class="fr f12 light">查看更多<i class="iconfont icon-right"></i></a>
-      </div>
-      <div class="section">
-        <img src="/images/case_001.jpg" alt="">
-        <div class="">
-          <div>
-            <span class="light">车型：</span>宝马15台
-            <span class="fr f12 light">
-              <span class="f16 red">￥2400.00</span>
-              起
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <img src="/images/case_002.jpg" alt="">
-        <div class="">
-          <div>
-            <span class="light">车型：</span>宝马15台
-            <span class="fr f12 light">
-              <span class="f16 red">￥2400.00</span>
-              起
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <img src="/images/case_002.jpg" alt="">
-        <div class="">
-          <div>
-            <span class="light">车型：</span>宝马15台
-            <span class="fr f12 light">
-              <span class="f16 red">￥2400.00</span>
-              起
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <img src="/images/case_002.jpg" alt="">
-        <div class="">
-          <div>
-            <span class="light">车型：</span>宝马15台
-            <span class="fr f12 light">
-              <span class="f16 red">￥2400.00</span>
-              起
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

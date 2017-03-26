@@ -1,7 +1,7 @@
 var router = require('koa-router')();
 
 // 设定路由规则
-router.get('/', function* (next) {
+router.get('/', function*(next) {
 
     var model = {};
 
@@ -11,7 +11,7 @@ router.get('/', function* (next) {
     );
 });
 
-router.get('/index', function* (next) {
+router.get('/index', function*(next) {
 
     var model = {};
 
@@ -21,7 +21,7 @@ router.get('/index', function* (next) {
     );
 });
 
-router.get('/appointment', function* (next) {
+router.get('/appointment', function*(next) {
 
     var model = {};
 
@@ -31,7 +31,7 @@ router.get('/appointment', function* (next) {
     );
 });
 
-router.get('/order/create', function* (next) {
+router.get('/order/create', function*(next) {
 
     var model = {};
 
@@ -41,12 +41,50 @@ router.get('/order/create', function* (next) {
     );
 });
 
-router.get('/help', function* (next) {
+router.get('/help', function*(next) {
 
     var model = {};
 
     yield this.render(
         "weddingcar/help",
+        model
+    );
+});
+
+/**
+ * 主车（驾驶员）登录后的首页
+ */
+router.get('/driver/index', function*(next) {
+
+    var model = {};
+
+    yield this.render(
+        "weddingcar/driver/index",
+        model
+    );
+});
+
+router.get('/ctrl/swiper', function*(next) {
+
+    var model = {};
+
+    yield this.render(
+        "weddingcar/swiper",
+        model
+    );
+});
+
+/**
+ * 应用底部菜单
+ * footbar
+ * URL:/weddingcar/footbar
+ */
+router.get('/footbar', function*(next) {
+
+    var model = {};
+
+    yield this.render(
+        "weddingcar/footbar",
         model
     );
 });

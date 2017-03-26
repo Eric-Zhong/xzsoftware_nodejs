@@ -21,7 +21,9 @@ module.exports = function(grunt) {
                     "src/weddingcar/js/*.js",
                     "src/weddingcar/css/*.css",
                     "src/fitcc/js/*.js",
-                    "src/fitcc/css/*.css"
+                    "src/fitcc/css/*.css",
+                    "src/demo/js/*.js",
+                    "src/demo/css/*.css"
                 ],
                 tasks: [
                     "copy",
@@ -36,16 +38,25 @@ module.exports = function(grunt) {
             main: {
                 files: [{
                     expand: true,
+                    cwd: "node_modules/font-awesome/fonts",
                     src: [
-                        "node_modules/font-awesome/fonts"
+                        "*"
                     ],
                     dest: "public/weddingcar/fonts"
                 }, {
                     expand: true,
+                    cwd: "node_modules/font-awesome/fonts",
                     src: [
-                        "node_modules/font-awesome/fonts"
+                        "*"
                     ],
                     dest: "public/fitcc/fonts"
+                }, {
+                    expand: true,
+                    cwd: "node_modules/font-awesome/fonts",
+                    src: [
+                        "*"
+                    ],
+                    dest: "public/demo/fonts"
                 }]
             },
         },
@@ -100,7 +111,17 @@ module.exports = function(grunt) {
                 ],
                 dest: "public/fitcc/css/_compontent.css"
             },
-            weddingcar_compontent_js: {
+            demo_compontent_css: {
+                src: [
+                    "node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css",
+                    "node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-base.css",
+                    "node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css",
+                    "node_modules/angular-ui-swiper/dist/angular-ui-swiper.css",
+                    "node_modules/vis/dist/vis.css"
+                ],
+                dest: "public/demo/css/_compontent.css"
+            },
+            compontent_js_weddingcar: {
                 src: [
                     "node_modules/angular/angular.js",
                     "node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.js",
@@ -120,9 +141,21 @@ module.exports = function(grunt) {
                     "node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.js",
                     "node_modules/angular-ui-swiper/dist/angular-ui-swiper.js",
                     "node_modules/angular-ui-router/release/angular-ui-router.js",
-                    "node_modules/vis/dist/vis.min.js"
+                    // "node_modules/vis/dist/vis.min.js"
                 ],
                 dest: "public/fitcc/js/_compontent.js"
+            },
+            compontent_js_demo: {
+                src: [
+                    "node_modules/angular/angular.js",
+                    "node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.js",
+                    "node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js",
+                    "node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.js",
+                    "node_modules/angular-ui-swiper/dist/angular-ui-swiper.js",
+                    "node_modules/angular-ui-router/release/angular-ui-router.js",
+                    "node_modules/vis/dist/vis.min.js"
+                ],
+                dest: "public/demo/js/_compontent.js"
             },
             // Wedding car compontent
             weddingcar_app_css: {
@@ -149,6 +182,18 @@ module.exports = function(grunt) {
                     "src/fitcc/js/*.js"
                 ],
                 dest: "public/fitcc/js/app.js"
+            },
+            demo_app_css: {
+                src: [
+                    "src/demo/css/*.css"
+                ],
+                dest: "public/demo/css/app.css"
+            },
+            demo_app_js: {
+                src: [
+                    "src/demo/js/*.js"
+                ],
+                dest: "public/demo/js/app.js"
             }
         },
 

@@ -13,9 +13,10 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var appRoute = require('./routes/app');
 var pageRoute = require('./routes/page');
-var weddingcarRoute = require("./routes/weddingcar")
-var ganttRoute = require("./routes/gantt")
-var fitccRoute = require("./routes/fitcc")
+var weddingcarRoute = require("./routes/weddingcar");
+var ganttRoute = require("./routes/gantt");
+var fitccRoute = require("./routes/fitcc");
+var demoRoute = require("./routes/demo");
 
 // global middlewares
 // 定义Koa中，默认读取view文件的基础路径
@@ -47,6 +48,7 @@ koa.use('/page', pageRoute.routes(), pageRoute.allowedMethods());
 koa.use('/weddingcar', weddingcarRoute.routes(), weddingcarRoute.allowedMethods());
 koa.use('/gantt', ganttRoute.routes(), ganttRoute.allowedMethods());
 koa.use('/fitcc', fitccRoute.routes(), fitccRoute.allowedMethods());
+koa.use('/demo', demoRoute.routes(), demoRoute.allowedMethods());
 
 // mount root routes  
 app.use(koa.routes());

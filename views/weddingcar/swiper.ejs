@@ -1,0 +1,8 @@
+<swiper instance="swiper" autoplay="{{swiperOption.waiting}}" lazyLoading="{{swiperOption.lazyLoading}}" style="height: 100px;">
+    <slides ng-show="swiperOption.items.length > 0">
+        <slide ng-repeat="item in swiperOption.items">
+            <img ng-src="{{item.imageUrl}}" style="width: 100%;" />
+        </slide>
+    </slides>
+    <pagination></pagination>
+</swiper>
